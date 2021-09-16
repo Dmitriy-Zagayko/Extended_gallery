@@ -19,6 +19,8 @@
 		"no-unreachable-loop": "warn",
 		"block-scoped-var": "warn",
 		"no-var": "warn",
+		"no-magic-numbers": 2,
+		"eol-last": 2,
 		"eqeqeq": 2,
 		"no-extra-bind": 2,
 		"no-lone-blocks": 2,
