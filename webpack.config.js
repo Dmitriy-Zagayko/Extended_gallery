@@ -59,8 +59,15 @@ module.exports = {
 				use: ["file-loader"],
 			},
 			{
-				test: /\.(png|gif|jpg|jpeg)/,
-				use: ["file-loader"],
+				test: /\.(png|gif|jpe?g|svg|ico)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							name: "[name].[ext]",
+						},
+					},
+				],
 			},
 			{
 				test: /\.css$/i,
