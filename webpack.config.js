@@ -13,7 +13,7 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].js",
 	},
-	devServer: { compress: true, port: 5050 },
+	devServer: { compress: true, port: 5555 },
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "src/html/index.html",
