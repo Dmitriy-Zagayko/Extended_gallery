@@ -1,17 +1,19 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
-const authorization = require('./routes/authorization');
-const registration = require('./routes/registration');
+const authorization = require('./routes/authorization.router');
+const registration = require('./routes/registration.router');
 
 require('dotenv').config();
 
 const app = express();
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-app.use('/api/authorization', authorization);
-app.use('/api/registration', registration);
+app.use('/api', authorization);
+app.use('/api', registration);
 
 const PORT = process.env.PORT || 4050;
 

@@ -5,9 +5,7 @@ const registration = Router();
 
 registration.post('/registration', async (req, res) => {
 	try {
-
 		const { login, password } = req.body;
-
 		const candidate = await User.findOne({ login });
 
 		if (candidate) {

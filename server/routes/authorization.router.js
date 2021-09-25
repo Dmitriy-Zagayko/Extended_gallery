@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const authorization = Router();
@@ -8,9 +9,7 @@ const secretKey = process.env.SECRET_KEY;
 
 authorization.post('/authorization', async (req, res) => {
 	try {
-
 		const { login, password } = req.body;
-
 		const user = await User.findOne({ login });
 
 		if (!user) {
@@ -18,7 +17,6 @@ authorization.post('/authorization', async (req, res) => {
 		}
 
 		const isMatch = await bcrypt.compare(password, user.password);
-
 		if (!isMatch) {
 			return res.status(400).json({ message: 'Wrong password, try again.' });
 		}
@@ -29,8 +27,8 @@ authorization.post('/authorization', async (req, res) => {
 			{ expiresIn: '1h' },
 		);
 
-		res.json({ token, userId: user.id });
-
+		res.json({ token });
+		
 	} catch (e) {
 		res.status(500).json({ message: 'Something go wrong. Try again.' });
 	}
