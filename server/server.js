@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authorization = require('./routes/authorization.router');
 const registration = require('./routes/registration.router');
+const { validateFieldsInRegistration } = require('./validation/validation.server');
 
 require('dotenv').config();
 
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/api', authorization);
-app.use('/api', registration);
+app.use('/api', validateFieldsInRegistration, registration);
 
 const PORT = process.env.PORT || 4050;
 

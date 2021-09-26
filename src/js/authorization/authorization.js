@@ -17,6 +17,7 @@ export const authorization = () => {
 				const redirect = (path) => window.location.pathname = path;
 				redirect('gallery.html');
 			}
+			console.log(data.message);
 		}).catch(() => {
 			console.log('Something go wrong.');
 		});
