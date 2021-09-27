@@ -8,7 +8,7 @@ export const getRequest = async (url, optionalHeaders = {}) => {
 		const answer = await fetch(url, options);
 		return answer.json();
 	} catch (e) {
-		console.log('Something (GET) go wrong.', e);
+		e.JSON({ message: 'Something (GET) go wrong.' });
 	}
 };
 
@@ -23,7 +23,7 @@ export const postRequest = async (url, body, optionalHeaders = {}) => {
 		const answer = await fetch(url, options);
 		return answer.json();
 	} catch (e) {
-		console.log('Something (POST) go wrong.', e);
+		e.JSON({ message: 'Something (POST) go wrong.' });
 	}
 };
 
@@ -38,7 +38,7 @@ export const putRequest = async (url, body, optionalHeaders = {}) => {
 		const answer = await fetch(url, options);
 		return answer.json();
 	} catch (e) {
-		console.log('Something (PUT) go wrong.', e);
+		e.JSON({ message: 'Something (PUT) go wrong.' });
 	}
 };
 
@@ -52,6 +52,6 @@ export const deleteRequest = async (url, optionalHeaders = {}) => {
 		const answer = await fetch(url, options);
 		return answer.json();
 	} catch (e) {
-		console.log('Something (DELETE) go wrong.', e);
+		e.JSON({ message: 'Something (DELETE) go wrong.' });
 	}
 };

@@ -18,15 +18,33 @@
 			<h2 class="registration__h2">Registration</h2>
 
 			<p class="registration__p-login">Login*</p>
-			<input id="login-input-registration" class="registration__input-login" type="text" placeholder="Write your login">
+
+			<input 
+			id="login-input-registration" 
+			class="registration__input-login" 
+			type="text" 
+			placeholder="Write your login" 
+			title="Length: 3-20, correct symbol: 0-9, a-z, A-Z"
+			>
 
 			<p class="registration__p-password">Password*</p>
-			<input id="password-input-registration" class="registration__input-password" type="text"
-				placeholder="Write your password">
+			<input 
+			id="password-input-registration" 
+			class="registration__input-password" 
+			type="text" 
+			placeholder="Write your password"
+			title="Length: 3-20, correct symbol: 0-1, a-z, A-Z, !@#$^.№&;%(*?/:=)-_+"
+			>
 
 			<p class="registration__p-confirm-password">Confirm password*</p>
-			<input id="password-confirm-input-registration" class="registration__input-confirm-password" type="text"
-				placeholder="Repeat your password">
+			<input 
+			id="password-confirm-input-registration" 
+			class="registration__input-confirm-password" 
+			type="text" 
+			placeholder="Repeat your password"
+			title="Length: 3-20, correct symbol: 0-1, a-z, A-Z, !@#$^.№&;%(*?/:=)-_+"
+			>
+			<p id="text-error" class="general__p_text-error"></p>
 
 			<button id="registration-button" class="registration__btn">Register</button>
 
