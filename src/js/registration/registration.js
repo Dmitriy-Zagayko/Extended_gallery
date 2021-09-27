@@ -1,6 +1,7 @@
 import '../../style/style.css';
 import { postRequest } from '../helpers/request';
 import * as constants from '../helpers/constants';
+import { support } from '../helpers/support';
 import { validateFieldsInRegistration } from '../helpers/validation.client';
 
 export const registration = () => {
@@ -24,8 +25,7 @@ export const registration = () => {
 						console.log('Something go wrong. Try again.');
 					}
 					if (data.message === 'Done!') {
-						const redirect = (path) => window.location.pathname = path;
-						redirect('index.html');
+						support.redirect('index.html');
 					}
 				}).catch(() => {
 					console.log('Something go wrong.');

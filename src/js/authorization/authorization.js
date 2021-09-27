@@ -1,5 +1,6 @@
 import '../../style/style.css';
 import { postRequest } from '../helpers/request';
+import { support } from '../helpers/support';
 import * as constants from '../helpers/constants';
 
 export const authorization = () => {
@@ -14,8 +15,8 @@ export const authorization = () => {
 		
 		postRequest(constants.AUTHURL, authorizationBody).then((data) => {
 			if (data.token) {
-				const redirect = (path) => window.location.pathname = path;
-				redirect('gallery.html');
+				support.setCookie('token', data.token, constants.AGETOKEN);
+				support.redirect('gallery.html');
 			}
 			console.log(data.message);
 		}).catch(() => {
