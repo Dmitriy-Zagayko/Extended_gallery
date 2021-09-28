@@ -5,7 +5,7 @@
 	text-align: right;
 }
 
-.gallery__btn-slideShow {
+.gallery__btn-slideShow, .gallery__btn-logOut {
 	width: 9%;
 	margin: 5px;
 	border-radius: 10px;

@@ -12,10 +12,13 @@ export const gallery = () => {
 
 	const btnStartSlideShow = document.getElementById('btnStartSlideShow');
 	const btnStopSlideShow = document.getElementById('btnStopSlideShow');
+	const btnLogOut = document.getElementById('btnLogOut');
 	const gallerySmallPicture = document.getElementById('gallery-small-picture');
 	const bigPicture = document.getElementById('bigPicture');
 	const smallPicture = document.getElementsByClassName('gallery__small-picture');
 
+
+	btnLogOut.addEventListener('click', exit);
 	gallerySmallPicture.addEventListener('click', changeBigPicture);
 	btnStartSlideShow.addEventListener('click', startSlideShow);
 	btnStopSlideShow.addEventListener('click', stopSlideShow);
@@ -51,6 +54,11 @@ export const gallery = () => {
 		render.hide(btnStopSlideShow);
 		bigPicture.classList.remove('after_start');
 		clearInterval(interval);
+	}
+
+	function exit() {
+		support.killCookie('token');
+		support.redirect('index.html');
 	}
 	
 };

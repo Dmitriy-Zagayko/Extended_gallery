@@ -12,6 +12,12 @@ export const registration = () => {
 	const passwordConfirmInputReg = document.getElementById('password-confirm-input-registration');
 	const registrationButton = document.getElementById('registration-button');
 	const textError = document.getElementById('text-error');
+	const eyePass = document.getElementById('hideShowPass');
+	const eyeConfirmPass = document.getElementById('hideShowConfirmPass');
+
+	support.showHidePassword(eyePass, passwordInputReg);
+	support.showHidePassword(eyeConfirmPass, passwordConfirmInputReg);
+
 
 	registrationButton.addEventListener('click', () => {
 

@@ -8,4 +8,15 @@ export const support = {
 		const part = data.split(`; ${name}=`);
 		if (part.length === constants.GENERALLENGTH) return part.pop().split(';').shift();
 	},
+	killCookie: (name) => document.cookie = `${name}=;max-age=0`,
+	showHidePassword: (element, input) => {
+		element.addEventListener('click', () => {
+			if (input.getAttribute('type') === 'password') {
+				return input.setAttribute('type', 'text');
+			}
+			if (input.getAttribute('type') === 'text') {
+				return input.setAttribute('type', 'password');
+			}
+		});
+	},
 };
