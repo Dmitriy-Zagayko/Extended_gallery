@@ -10,3 +10,14 @@
 .general__p_text-error {
 	color: rgb(223, 29, 29);
 }
+
+.general-main-bloc__img-input-pass {
+	position: relative;
+}
+
+.general-main-bloc__img-eye {
+	position: absolute;
+	top: 0.7em;
+	right: 0.1em;
+	cursor: pointer;
+}
