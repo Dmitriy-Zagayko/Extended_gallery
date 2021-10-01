@@ -36,7 +36,7 @@ export const gallery = () => {
 		render.hide(btnStartSlideShow);
 		render.hide(gallerySmallPicture);
 		render.show(btnStopSlideShow);
-		bigPicture.classList.add('after_start');
+		bigPicture.classList.add('gallery__big-picture_after-start');
 		interval = setInterval(slideShow, constants.MSFORSLIDESHOW);
 	}
 
@@ -52,7 +52,7 @@ export const gallery = () => {
 		render.show(btnStartSlideShow);
 		render.show(gallerySmallPicture);
 		render.hide(btnStopSlideShow);
-		bigPicture.classList.remove('after_start');
+		bigPicture.classList.remove('gallery__big-picture_after-start');
 		clearInterval(interval);
 	}
 
