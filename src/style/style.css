@@ -16,8 +16,6 @@ body {
 }
 
 .general-main-bloc__btn-eye {
-	background: url(../assets/img/eye.svg) no-repeat center;
-	background-size: 23px 23px;
 	position: absolute;
 	border: none;
 	outline: none;

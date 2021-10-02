@@ -1,81 +1,70 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	entry: {
-		authorization: ["@babel/polyfill", path.resolve(__dirname, "./src/js/authorization/")],
-		registration: ["@babel/polyfill", path.resolve(__dirname, "./src/js/registration/")],
-		gallery: ["@babel/polyfill", path.resolve(__dirname, "./src/js/gallery/")],
+		authorization: ['@babel/polyfill', path.resolve(__dirname, './src/js/authorization/')],
+		registration: ['@babel/polyfill', path.resolve(__dirname, './src/js/registration/')],
+		gallery: ['@babel/polyfill', path.resolve(__dirname, './src/js/gallery/')],
 	},
 	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "[name].js",
+		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].js',
 	},
 	devServer: { compress: true, port: 5555 },
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "src/html/index.html",
-			filename: "index.html",
-			chunks: ["authorization"],
+			template: 'src/html/index.html',
+			filename: 'index.html',
+			chunks: ['authorization'],
 		}),
 		new HtmlWebpackPlugin({
-			template: "src/html/registration.html",
-			filename: "registration.html",
-			chunks: ["registration"],
+			template: 'src/html/registration.html',
+			filename: 'registration.html',
+			chunks: ['registration'],
 		}),
 		new HtmlWebpackPlugin({
-			template: "src/html/gallery.html",
-			filename: "gallery.html",
-			chunks: ["gallery"],
+			template: 'src/html/gallery.html',
+			filename: 'gallery.html',
+			chunks: ['gallery'],
 		}),
 		new MiniCssExtractPlugin({
-			filename: "[name].css",
+			filename: '[name].css',
 		}),
 		new CopyWebpackPlugin({
-			patterns: [{ from: "src/assets/img/", to: "assets/img" }],
+			patterns: [{ from: 'src/assets/img/', to: 'assets/img' }],
 		}),
 	],
-	resolve: { extensions: [".js"] },
+	resolve: { extensions: ['.js'] },
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: "babel-loader",
+					loader: 'babel-loader',
 				},
 			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: "eslint-loader",
+					loader: 'eslint-loader',
 				},
 			},
 			{
 				test: /\.(ttf|woff|woff2|otf)/,
-				use: ["file-loader"],
+				use: ['file-loader'],
 			},
 			{
 				test: /\.(png|gif|jpe?g|svg|ico)$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-						},
-					},
-				],
+				use: ['file-loader'],
 			},
 			{
 				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, "css-loader"],
-			},
-			{
-				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+				use: [MiniCssExtractPlugin.loader, 'css-loader'],
 			},
 		]
 	}

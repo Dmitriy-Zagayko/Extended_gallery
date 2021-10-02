@@ -5,19 +5,8 @@
 	width: 100%;
 }
 
-.gallery__btn-slideShow_start {
-	background: url(../assets/img/start-slide-show.svg) no-repeat center;
-}
-
-.gallery__btn-slideShow_stop {
-	background: url(../assets/img/stop-slide-show.svg) no-repeat center;
-}
-
-.gallery__btn-logOut {
-	background: url(../assets/img/logout.svg) no-repeat center;
-}
-
 .gallery__btn-slideShow_start, .gallery__btn-slideShow_stop, .gallery__btn-logOut {
+	background: no-repeat center;
 	width: 55px;
 	height: 35px;
 	margin: 5px 2px 12px 10px;
