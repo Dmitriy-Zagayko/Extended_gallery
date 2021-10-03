@@ -13,8 +13,19 @@
 	border: none;
 	border-radius: 10px;
 	background-color: #3F0F0F;
-	box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 4px 6px rgba(158, 12, 12, 0.4);
 	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+.gallery__btn-slideShow_start:hover, .gallery__btn-slideShow_stop:hover, .gallery__btn-logOut:hover {
+background-color: #691212;
+box-shadow: 0px 7px 10px rgba(107, 16, 16, 1);
+}
+
+.gallery__btn-slideShow_start:active, .gallery__btn-slideShow_stop:active, .gallery__btn-logOut:active {
+background-color: #801919;
+box-shadow: 0px 10px 15px rgba(255, 0, 0, 0.6);
 }
 
 .gallery-main {
