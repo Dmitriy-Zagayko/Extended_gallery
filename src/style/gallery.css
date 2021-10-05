@@ -57,7 +57,7 @@ box-shadow: 0px 10px 15px rgba(255, 0, 0, 0.6);
 .gallery-footer__small-picture {
 	width: 200px;
 	height: 120px;
-	padding: 10px 20px 10px 0px;
+	margin: 10px 20px 10px 0px;
 	opacity: 0.5;
 	cursor: pointer;
 }
