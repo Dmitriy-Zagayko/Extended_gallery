@@ -1,5 +1,5 @@
 export const
-	URL = 'http://localhost:4444/',
+	URL = 'http://3.66.110.227/',
 	REGURL = URL + 'api/registration',
 	AUTHURL = URL + 'api/authorization',
 	AGETOKEN = 2,

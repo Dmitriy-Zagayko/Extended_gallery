@@ -12,8 +12,8 @@ export const registration = () => {
 	const passwordConfirmInputReg = document.getElementById('password-confirm-input-registration');
 	const registrationButton = document.getElementById('registration-button');
 	const textError = document.getElementById('text-error');
-	const eyePass = document.getElementById('hideShowPass');
-	const eyeConfirmPass = document.getElementById('hideShowConfirmPass');
+	const eyePass = document.getElementById('show-hide-password');
+	const eyeConfirmPass = document.getElementById('show-hide-confirm-password');
 
 	support.showHidePassword(eyePass, passwordInputReg);
 	support.showHidePassword(eyeConfirmPass, passwordConfirmInputReg);

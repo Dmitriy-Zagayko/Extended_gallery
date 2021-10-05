@@ -3,8 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authorization = require('./routes/authorization.router');
 const registration = require('./routes/registration.router');
-const gallery = require('./routes/gallery.router');
-const { validateFieldsInRegistration, authentificateToken } = require('./validation/validation.server');
+const { validateFieldsInRegistration } = require('./validation/validation.server');
 
 require('dotenv').config();
 
@@ -16,7 +15,6 @@ app.use(cors());
 
 app.use('/api', authorization);
 app.use('/api', validateFieldsInRegistration, registration);
-app.use('/api/gallery', authentificateToken, gallery);
 
 const PORT = process.env.PORT || 4050;
 

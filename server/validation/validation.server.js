@@ -19,12 +19,4 @@ const validateFieldsInRegistration = (req, res, next) => {
 	next();
 };
 
-const authentificateToken = (req, res, next) => {
-	try {
-		next();
-	} catch (e) {
-		res.sendStatus(400).json({ message: 'Bad request.' });
-	}
-};
-
-module.exports = { validateFieldsInRegistration, authentificateToken };
+module.exports = { validateFieldsInRegistration };

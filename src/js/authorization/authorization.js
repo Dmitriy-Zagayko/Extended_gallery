@@ -10,7 +10,7 @@ export const authorization = () => {
 	const passwordInputAuth = document.getElementById('password-input-authorization');
 	const loginButton = document.getElementById('login-button');
 	const textError = document.getElementById('text-error');
-	const eye = document.getElementById('hideShowPass');
+	const eye = document.getElementById('show-hide-password');
 
 	support.showHidePassword(eye, passwordInputAuth);
 

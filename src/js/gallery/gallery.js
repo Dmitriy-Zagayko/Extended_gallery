@@ -10,12 +10,12 @@ export const gallery = () => {
 		return support.redirect('index.html');
 	}
 
-	const btnStartSlideShow = document.getElementById('btnStartSlideShow');
-	const btnStopSlideShow = document.getElementById('btnStopSlideShow');
-	const btnLogOut = document.getElementById('btnLogOut');
+	const btnStartSlideShow = document.getElementById('btn-start-slide-show');
+	const btnStopSlideShow = document.getElementById('btn-stop-slide-show');
+	const btnLogOut = document.getElementById('btn-log-out');
 	const gallerySmallPicture = document.getElementById('gallery-small-picture');
-	const bigPicture = document.getElementById('bigPicture');
-	const smallPicture = document.getElementsByClassName('gallery__small-picture');
+	const bigPicture = document.getElementById('big-picture');
+	const smallPicture = document.getElementsByClassName('gallery-footer__small-picture');
 
 
 	btnLogOut.addEventListener('click', exit);
@@ -27,7 +27,7 @@ export const gallery = () => {
 	let counter = 0;
 
 	function changeBigPicture(event) {
-		if (event.target.className === 'gallery__small-picture') {
+		if (event.target.className === 'gallery-footer__small-picture') {
 			bigPicture.src = event.target.src;
 		}
 	}
@@ -36,7 +36,7 @@ export const gallery = () => {
 		render.hide(btnStartSlideShow);
 		render.hide(gallerySmallPicture);
 		render.show(btnStopSlideShow);
-		bigPicture.classList.add('gallery__big-picture_after-start');
+		bigPicture.classList.add('gallery-main__big-picture_flipping_start');
 		interval = setInterval(slideShow, constants.MSFORSLIDESHOW);
 	}
 
@@ -52,7 +52,7 @@ export const gallery = () => {
 		render.show(btnStartSlideShow);
 		render.show(gallerySmallPicture);
 		render.hide(btnStopSlideShow);
-		bigPicture.classList.remove('gallery__big-picture_after-start');
+		bigPicture.classList.remove('gallery-main__big-picture_flipping_start');
 		clearInterval(interval);
 	}
 
