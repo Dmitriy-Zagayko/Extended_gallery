@@ -51,7 +51,7 @@ box-shadow: 0px 10px 15px rgba(255, 0, 0, 0.6);
 	justify-content: space-between;
 	overflow-x: scroll;
 	overflow-y: hidden;
-	padding: 10px 0px 15px 0px;
+	padding: 10px 0px;
 }
 
 .gallery-footer__small-picture {
@@ -69,7 +69,8 @@ box-shadow: 0px 10px 15px rgba(255, 0, 0, 0.6);
 
 @media (max-width: 1023.98px) {
 	.gallery-footer__small-picture {
-	opacity: 1;
+		opacity: 1;
+		margin: 10px 20px 0px 0;
 	}
 	.gallery-footer__small-picture:hover {
 		transform: none;
