@@ -110,3 +110,19 @@ box-shadow: 0px 0px 6px 4px rgba(109, 92, 92, 0.5);
 .authorization-main__content-a:hover, .registration-main__content-a:hover {
 	color: #ccc;
 }
+
+.authorization-footer, .registration-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.authorization-footer__a-sourceCode, .registration-footer__a-sourceCode {
+	color: #58a6ff;
+}
+
+@media (max-width: 1023.98px) and (orientation:landscape) {
+	.authorization-footer__a-sourceCode, .registration-footer__a-sourceCode {
+		display: none;
+	}
+}

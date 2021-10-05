@@ -25,7 +25,7 @@
 			class="registration-main__content-input-login" 
 			type="text" 
 			placeholder="Write your login" 
-			title="Length: 3-20, correct symbol: 0-9, a-z, A-Z"
+			title="Length: 3-20, correct symbol: 0-9, a-z, а-я, A-Z, А-Я"
 			>
 
 			<p class="registration-main__content-p-password">Password*</p>
@@ -35,9 +35,13 @@
 			class="registration-main__content-input-password" 
 			type="password" 
 			placeholder="Write your password"
-			title="Length: 3-20, correct symbol: 0-1, a-z, A-Z, !@#$^.№&;%(*?/:=)-_+"
+			title="Length: 3-20, correct symbol: 0-1, a-z, а-я, A-Z, А-Я, !@#$^.№&;%(*?/:=)-_+"
 			>
-			<button id="show-hide-password" class="general-main__btn-eye" style="background: url(/assets/img/eye.svg) no-repeat center"></button>
+			<button 
+			id="show-hide-password" 
+			class="general-main__btn-eye" 
+			style="background: url(/assets/img/eye.svg) no-repeat center">
+			</button>
 			</div>
 
 			<p class="registration-main__content-p-confirm-password">Confirm password*</p>
@@ -47,21 +51,46 @@
 			class="registration-main__content-input-confirm-password" 
 			type="password" 
 			placeholder="Repeat your password"
-			title="Length: 3-20, correct symbol: 0-1, a-z, A-Z, !@#$^.№&;%(*?/:=)-_+"
+			title="Length: 3-20, correct symbol: 0-1, a-z, а-я, A-Z, А-Я, !@#$^.№&;%(*?/:=)-_+"
 			>
-			<button id="show-hide-confirm-password" class="general-main__btn-eye" style="background: url(/assets/img/eye.svg) no-repeat center"></button>
+			<button 
+			id="show-hide-confirm-password" 
+			class="general-main__btn-eye" 
+			style="background: url(/assets/img/eye.svg) no-repeat center">
+			</button>
 			</div>
 
 			<p id="text-error" class="general-main__p-text-error"></p>
 
-			<button id="registration-button" class="registration-main__content-btn-register">Register</button>
+			<button 
+			id="registration-button" 
+			class="registration-main__content-btn-register">
+			Register
+			</button>
 
-			<p class="registration-main__content-p">Go to <a class="registration-main__content-a" href="./index.html">authorization</a></p>
+			<p class="registration-main__content-p">
+				Go to 
+				<a class="registration-main__content-a" href="./index.html">
+					authorization
+				</a>
+			</p>
 		</div>
 
 	</main>
 
-	<footer class="registration-footer"></footer>
+	<footer class="registration-footer">
+
+		<a 
+		href="https://github.com/Dmitriy-Zagayko/Extended_gallery/tree/deployVersion" 
+		target="_blank" 
+		rel="noopener noreferrer" 
+		class="registration-footer__a-sourceCode">
+			<code>
+				const sourceCode = (github) => support.redirect(github);
+			</code>
+		</a>
+
+	</footer>
 
 </body>
 

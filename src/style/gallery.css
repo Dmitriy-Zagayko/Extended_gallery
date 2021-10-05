@@ -63,8 +63,18 @@ box-shadow: 0px 10px 15px rgba(255, 0, 0, 0.6);
 }
 
 .gallery-footer__small-picture:hover {
-  transform: scale(1.5);
-  opacity: 1;
+	transform: scale(1.5);
+	opacity: 1;
+}
+
+@media (max-width: 1023.98px) {
+	.gallery-footer__small-picture {
+	opacity: 1;
+	}
+	.gallery-footer__small-picture:hover {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 .hide {

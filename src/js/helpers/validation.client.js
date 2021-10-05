@@ -1,6 +1,6 @@
 export const validateFieldsInRegistration = (login, password, confirmPassword, error) => {
-	const validateLogin = new RegExp(/^[a-z0-9]{3,20}/, 'i');
-	const validatePassword = new RegExp(/^[!@#$^.№&;%(*?/:=)-_+]{5,20}/, 'i');
+	const validateLogin = new RegExp(/^[a-zа-я0-9]{3,20}/, 'i');
+	const validatePassword = new RegExp(/^[a-zа-я0-9!@#$^.№&;%(*?/:=)-_+]{5,20}/, 'i');
 	if (!login || !password) {
 		error.textContent = 'Empty fields';
 		return false;
